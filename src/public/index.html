@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ChatJS</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/bulma.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/main.css"/>
+</head>
+<body style="margin-top:70px;">
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <img src="assets/img/logo.png" />
+          </a>
+        </div>
+    </nav>
+    <div id="NickWrap" class="container">
+      <div class="columns">
+        <div class="column is-one-quarter"></div>
+        <div class="column nick-lg-fm animated bounceInDown delay-1s">
+          <div class="card formNick">
+            <header class="card-header">
+              <p class="card-header-title">
+                  <span class="icon">
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                  </span>
+                Login Form
+              </p>
+            </header>
+            <form id="nickForm">
+            <div class="nk-message"></div>
+            <div class="field">
+              <div class="control">
+                <label for="nickname_field">Nickname
+                  <input class="input" id="nickname_field" type="text" placeholder="nickname">
+                </label>
+              </div>
+            </div>
+            <button class="button">
+             LogIn <i class="fas fa-sign-in-alt"></i>
+            </button>
+            </form>
+          </div>
+        </div>
+        <div class="column is-one-quarter"></div>
+      </div>
+    </div>
+
+    <div id="contentWrap" class="container" style="display: none;">
+        <div class="columns animated slideInUp">
+            <div class="column is-three-quarters">
+                <div class="card">
+                    <header class="card-header">
+                      <p class="card-header-title">
+                        Let's chat
+                      </p>
+                    </header>
+                    <div class="card-content">
+                      <div id="chat" class="content">
+                        
+                      </div>
+                    </div>
+                    <footer class="card-footer">
+                        <form id="message-form" style="width:100%;">
+                            <textarea id="message" class="textarea" placeholder="e.g. Hello world"></textarea>
+                            <div class="buttons">
+                                <button class="button send">Send message <i class="far fa-paper-plane"></i></button>
+                            </div>
+                        </form>
+                    </footer>
+                  </div>
+            </div>
+            <div id="users" class="column">
+              <div class="title"><h4><i class="fas fa-user-friends"></i> Users online</h4></div>
+              <div class="user-list"></div>
+            </div>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://kit.fontawesome.com/74bac94222.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

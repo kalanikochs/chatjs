@@ -1,0 +1,23 @@
+{
+  "name": "chat-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.7.10",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.0"
+  }
+}
